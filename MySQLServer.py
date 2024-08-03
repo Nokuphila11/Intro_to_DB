@@ -15,7 +15,7 @@ def create_database(db_name, host="localhost", user="your_username", password="y
     cnx = mysql.connector.connect(host=host, user=user, password=password)
     cursor = cnx.cursor()
 
-    # Create the database (ignoring any errors if it already exists)
+    # Create the database using CREATE DATABASE IF NOT EXISTS
     cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
 
     cnx.commit()
@@ -28,3 +28,4 @@ def create_database(db_name, host="localhost", user="your_username", password="y
 
 if __name__ == "__main__":
   create_database("alx_book_store")
+
