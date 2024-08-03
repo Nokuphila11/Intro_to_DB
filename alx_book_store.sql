@@ -1,5 +1,5 @@
--- Create database
-CREATE DATABASE alx_book_store;
+-- Create database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 -- Use the database
 USE alx_book_store;
@@ -38,10 +38,5 @@ CREATE TABLE Orders (
 
 -- Create Order_Details table
 CREATE TABLE Order_Details (
-    orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
-    order_id INT,
-    book_id INT,
-    quantity DOUBLE NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES Books(book_id)
-);
+    orderdetailid INT AUTO_INCREMENT PRIMARY KE
+
