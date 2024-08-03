@@ -16,3 +16,12 @@ finally:
         cursor.close()
         connection.close()
 
+import mysql.connector
+
+except mysql.connector.Error as error:
+    print(f"Error: {error}")
+finally:
+    if connection.is_connected():
+        cursor.close()
+        connection.close()
+
