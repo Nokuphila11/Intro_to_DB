@@ -1,31 +1,30 @@
--- Create database if not exists
-CREATE DATABASE IF NOT EXISTS alx_book_store;
-
--- Use the database
-USE alx_book_store;
-
--- Create BOOKS table
-CREATE TABLE BOOKS (
-  -- attributes from task 0
+CREATE TABLE IF NOT EXISTS alx_book_store.books (
+    ID INT PRIMARY KEY,
+    Title VARCHAR(255),
+    AuthorID INT,
+    Price DECIMAL(10, 2)
 );
 
--- Create AUTHORS table
-CREATE TABLE AUTHORS (
-  -- attributes from task 0
+CREATE TABLE IF NOT EXISTS alx_book_store.authors (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    Country VARCHAR(255)
 );
 
--- Create CUSTOMERS table
-CREATE TABLE CUSTOMERS (
-  -- attributes from task 0
+CREATE TABLE IF NOT EXISTS alx_book_store.customers (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    Email VARCHAR(255)
 );
 
--- Create ORDERS table
-CREATE TABLE ORDERS (
-  -- attributes from task 0
+CREATE TABLE IF NOT EXISTS alx_book_store.orders (
+    ID INT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATE
 );
 
--- Create ORDER_DETAILS table
-CREATE TABLE ORDER_DETAILS (
-  -- attributes from task 0
+CREATE TABLE IF NOT EXISTS alx_book_store.order_details (
+    OrderID INT,
+    BookID INT,
+    Quantity INT
 );
-
