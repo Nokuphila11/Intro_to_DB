@@ -6,9 +6,8 @@ CREATE TABLE IF NOT EXISTS alx_book_store.books (
 );
 
 CREATE TABLE IF NOT EXISTS alx_book_store.authors (
-    ID INT PRIMARY KEY,
-    Name VARCHAR(255),
-    Country VARCHAR(255)
+    author_id INT PRIMARY KEY,
+    author_name VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS alx_book_store.customers (
